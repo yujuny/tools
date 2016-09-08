@@ -1,3 +1,10 @@
-<?php
-    echo $_GET['a']*$_GET['b'];
-?>
+<script>
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+alert(GetQueryString("a"));
+alert(GetQueryString("b"));
+</script>
