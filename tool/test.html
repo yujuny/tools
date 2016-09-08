@@ -5,5 +5,7 @@ function GetQueryString(name)
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return null;
 }
-document.write(GetQueryString("a")*GetQueryString("b"));  
+var c = GetQueryString("a")*GetQueryString("b");
+alert(c);
+document.write(c);  
 </script>
